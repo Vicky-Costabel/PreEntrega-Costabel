@@ -1,0 +1,59 @@
+forma recomendada para declarar variables
+let edad = 50; la varibale de tipo number
+let nombre = "andres"; la variable de tipo string
+
+//nombre de las variables
+camelCase => nombreBonitoGrande
+PascalCase => NombreBonitoGrande
+snake_case => nombre_bonito_grande
+kbab-case => nombre-bonito-grande
+
+
+
+/* 
+valor1 && valor2 es true cuando ambos valores son verdaderos, en caso contrario es false
+valor1 || valor2 es true cuando al menos uno de los valores es verdadero, caso contrario es false
+*/
+
+//BUCLES O CICLOS
+
+/* 
+estructura del bucle for
+
+for(desde; hasta; actualizacion){
+  código a repetir por el bucle
+}
+*/
+
+
+//WHILE
+estructura del while
+
+while(condicion){
+  código a ejeuctar siempre que la condición sea verdadera
+}
+
+
+estructura del bucle do while
+
+do{
+  código a repetir por primera vez y luego siempre que la condición sea verdadera
+}while(condicion);
+
+
+estructura del switch
+
+switch(valor){
+  case valor1:
+    código a ejecutar cuando el valor === valor1;
+    break;
+
+  case valor2:
+    código a ejecutar cuando el valor === valor2;
+    break;
+
+  default:
+    código a ejecutar cuando el valor no coincide con ninguno de los valores
+    break;
+}
+
