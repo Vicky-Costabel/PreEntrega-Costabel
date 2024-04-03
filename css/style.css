@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "ThianaJones";
+  src: url(/fuentes/KDThaianaJones-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #bababa;
+  place-items: center;
+}
+
+header .menu {
+  justify-content: center;
+}
+header div {
+  width: 100vw;
+  height: 90vh;
+}
+header div #c {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(22, 137, 99);
+}
+header div #c .tarjeta {
+  position: fixed;
+  width: 300px;
+  height: 170px;
+  margin: 20px;
+}
+header div #c .tarjeta .cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.8s;
+}
+header div #c .tarjeta .tar-frontal {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+header div #c .tarjeta .tar-frontal img {
+  position: absolute;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header div #c .tarjeta .tar-trasera {
+  transform: perspective(600px) rotateY(180deg);
+  box-shadow: 0 5px 10px #000;
+}
+header div #c .tarjeta .tar-trasera img {
+  position: absolute;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header div #c .pantalla {
+  position: fixed;
+  top: 350px;
+  padding: 1.5rem;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  width: 50%;
+  height: 30vh;
+  color: #ffffff;
+}
+header div #c .telefono {
+  position: fixed;
+  left: 10px;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  width: 330px;
+  height: 30vh;
+}
+header div #c .telefono .teclado {
+  background-color: #343434;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 5.6rem);
+  gap: 0.5rem;
+}
+header div #c .telefono .teclado .btn {
+  color: white;
+  font-size: 40px;
+  border: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+header div #c .telefono .teclado .btn:hover {
+  background-color: #3f3f3f;
+}
+header div #c .telefono .teclado .btn #cero {
+  grid-column: span 2;
+}
+header div #c .telefono .teclado #llamar {
+  grid-column: 1/-1;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  align-content: center;
+  background-color: #6ae639;
+  border-radius: 3rem;
+}
+header div #c .telefono .teclado #llamar:hover {
+  background-color: #1eac21;
+  transition: ease-in 0.2s;
+}
+header div #c .telefono-show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
+}
+
+.modal-dialogo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s 0.9s;
+}
+.modal-dialogo .dialogo-con {
+  border-radius: 6px;
+  padding: 2.5em;
+  display: inline;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+  justify-content: center;
+}
+.modal-dialogo .dialogo-con .dialogo {
+  overflow: auto;
+}
+.modal-dialogo .dialogo-con .dialogo .container {
+  margin-bottom: 10px;
+}
+.modal-dialogo .dialogo-con .dialogo .container .burbuja-container {
+  text-align: center;
+  color: #fff;
+}
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
+}/*# sourceMappingURL=style.css.map */
