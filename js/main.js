@@ -17,8 +17,8 @@ function cambiarImagen() {
 }
 
 //telefono
-let codigoCorrecto = '4';
-// 46517585612
+let codigoCorrecto = '46517585612';
+
 let codigoIngresado = '';
 
 llamar.addEventListener('click', () => {
@@ -87,10 +87,10 @@ function iniciarDialogo() {
         if (mensajeActual < mensajes.length) {
             crearBurbuja(mensajes[mensajeActual]);
             mensajeActual++;
-            // Mantener la vista en la parte inferior del contenedor de mensajes
+            
             burbujaContainer.scrollTop = burbujaContainer.scrollHeight;
         } else {
-            // Deshabilitar el botón cuando se hayan mostrado todos los mensajes
+           
             botonSiguiente.disabled = true;
         }
     }
@@ -107,15 +107,14 @@ function iniciarDialogo() {
         mostrarMensajeSiguiente();
     }
 
-    // Agregar event listener al documento para hacer clic en cualquier parte de la pantalla
+    
     document.addEventListener('click', handleClick);
 
-    // Asegúrate de quitar el event listener cuando no lo necesites más para evitar múltiples ejecuciones
+   
     function detenerEscucha() {
         document.removeEventListener('click', handleClick);
     }
 
-    // Descomenta esta línea si deseas detener la escucha después de que se hayan mostrado todos los mensajes
-    // setTimeout(detenerEscucha, mensajes.length * 1000); // Detener escucha después de que se muestren todos los mensajes
+   
 }
 
