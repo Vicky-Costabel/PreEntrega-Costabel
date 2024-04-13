@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- mi estilo -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Proyecto</title>
+</head>
+<body class="animate__animated animate__fadeIn">
+    <header>
+        <nav class="nav nav-tabs menu" id="nav-tab" role="tablist">
+            <a class="nav-link" id="nav-c" data-bs-toggle="tab" href="#c" role="tab" aria-controls="nav-c" aria-selected="false">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAoBJREFUSEu11UvojmkYBvCfwRTKbJRxiGwcBk2zkDKUmkhiM8ZhgxCJsZFjo0iRKVYKhVmMEUKjZkFICQvHnMpsnIYpi7GQcgrjuXV/er38/T+L/7P5vvd5n+e67vu6r/t+22nj1a6N8X0uQV/8j3+aDexzCL7ChSQYhkfNkDRLEOeO4YcEPY6xSfZJnmYJVheUNXjAW1m74xesby2LZggG4GoB+xKj0QGRwXN8g1ufImmG4DDGYTvmJdheTMWfhfzHZgkG4u/a4di7gafog//yffy/mdn0w53KvQg6sn6LVc0g7PcEG4rGWxMs/i/HFiyskR/M6FdhHbphEZagcwO7ShDgnRLkBXYWrUdiaGp/skYwrUS6BxdxHnMKUcc8E1hd6hncLzr3wpliye8rYJFZHA6ZqiukqRf4FEZlI0ZTvifRJXyHaKKu2IWeiTgeUezqmoC/cuN2IZuRfXEa58r54XWC3zALc7EjSXaX7g2gV5icrol74aB41z5/w10hy7Ii869ZwwV1gvn5IiKPaGJ9gW1JGiQTs077891GLK2kFdGHvDPxe50g9L+Hx+iRETXubi6u+hnPMuoo5toiSXR4Yw3GdYRBQtqHdYJ4PoBJBWhFptq4HJkcygxiLzKYUqvJ0WKQMbWG/GBcD8IVvMYIROEbK7x9NgsZBay6ajE2Zdb9i6T/Ni59bFREY0WDhVShZYyDxvo2nXe5UqMocDRiYE3HH9XMWppF0clR9Fjh7ZiaRyoXQ7JotJVF1iF4Wbw/O639nnItEcR+uCNGdKO7a5K/e7xbivtTfow+ONPaNP06/R9jOurTu/LJvIYTZX9fyvnRAFojaCnqpvfbnOAN8Jt5GWIxtCcAAAAASUVORK5CYII="/>
+            </a>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show" id="c" role="tabpanel" aria-labelledby="nav-c">
+            <!-- Tarjeta -->
+                <div class="tarjeta">
+                    <div class="cara tar-frontal" id="tarjetaFrontal" onclick="cambiarImagen('tarjetaFrontal', 'img/tarjeta1.png')">
+                        <img id="imagen1" src="img/tarjeta1.png" alt="">
+                    </div>
+                    <div class="cara tar-trasera" id="tarjetaTrasera"
+                     onclick="cambiarImagen('tarjetaTrasera', 'img/tarjeta2.png')">
+                        <img id="imagen2" src="img/tarjeta2.png" alt="">
+                    </div>
+                </div>
+            <!-- /Tarjeta -->
+            <!-- Pantalla -->
+                <div class="pantalla"></div>
+            <!-- /Pantalla -->
+            <!-- Telefono -->
+                <div class="telefono">
+                    <div class="teclado">
+                        <button class="btn">7</button>
+                        <button class="btn">8</button>
+                        <button class="btn">9</button>
+                        <button class="btn">4</button>
+                        <button class="btn">5</button>
+                        <button class="btn">6</button>
+                        <button class="btn">1</button>
+                        <button class="btn">2</button>
+                        <button class="btn">3</button>
+                        <button class="btn">*</button>
+                        <button id="cero" class="btn">0</button>
+                        <button id="borrar" class="btn">←</button>
+                        <button id="llamar" class="btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfRJREFUSEvN1cvLTWEUx/HPS0kuZUBIihBC7gPlMqAkMaCM3OMfUEaMlBFmjEQMxEAyMDATSRISEZFLEWWgFAOEZ2mdOu92zpu9T2/Zders55z9+z7Pb631230G+eobZH3dABNwBb+wAR+abqQTYBxuYXqKvsCKppAqIMRvYBZeJ2AKnmNlE0gVELasxxssT4uuYxriJAF5X8euKuAHhmIy3qZQ1ONanuoBFvYC+IzRGIUvHQB3sbQXwCPMzc/jFLqfu47fVuNjL4DTxf9dpcA7cTaFokXHYxlu1xGP/1ZrsLv4fwrnSlG3ptgZ7Ci2HS227e8VEG0aO/6OifiExQjvv2E+ntaBdBq0i9iMwziYYidLV+3J9t2CO7keG7raNvF/tXAnwDw8zB0vKbAo7ogUnZPCl3AEJ7Ao12IYV1XnpFsWHcO+nOYYuHcJOZ5N0O7Sq7yZmhPfD9INMDwjI3r+JTai1bYL0rpNeIY1CYhhnFGFDBTXY8vDNzEzh25v+X5+gAK3T/y9ksZhb9e4bumMweX0NtYuZKu2YqSdFwWP3JpdIv6fASEwJEUPYRh+pl3RbZG8kbpfUzxSuF8o1nmjTSrzcaDUZHvpoJFdrIqCx7sjmuLPVQfQeiZOsQ7bMpvCxrieYG1bCjcG1BnkRif4vwC/Ab0RYxl9FmQXAAAAAElFTkSuQmCC"/></button>
+                    </div>
+                </div>
+            <!-- /telefono -->   
+            <div class="modal-dialogo ">
+                <div class="dialogo-con">
+                    <div class="dialogo">
+                        <div class="container">
+                        <p id="burbujaContainer" class="burbuja-container"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main>
+    </main>
+ 
+     <!-- Aos -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+         AOS.init();
+     </script>
+     <!-- Swiper -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!-- Bootstrap -->
+     <script src="/js/bootstrap.js" ></script>
+    
+     <script src="/js/main.js" defer></script>
+</body>
+    
+</html>
