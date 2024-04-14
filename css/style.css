@@ -67,7 +67,6 @@ main section .modal-inicio {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111111;
   display: flex;
   opacity: 0;
   pointer-events: none;
@@ -93,7 +92,9 @@ main section .modal-inicio .velo {
   height: 100vh;
   background-color: #ffffff;
   opacity: 0;
-  transition: opacity 4s ease;
+  transition: opacity 3s ease;
+  position: absolute;
+  top: 0;
 }
 main section .modal-inicio .barrera {
   display: flex;
@@ -102,10 +103,22 @@ main section .modal-inicio .barrera {
   margin-top: 100px;
 }
 main section .modal-inicio .barrera #boton {
+  position: relative;
   padding: 10px 20px;
   font-size: 50px;
   color: #ffffff;
   cursor: pointer;
+  z-index: 1000;
+}
+main section .modal-inicio .inicio {
+  position: fixed;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  transition: opacity 0.5s ease;
+  width: 80vw;
+  height: 200px;
+  text-align: center;
+  display: inline-flex;
 }
 main section .modal-inicio .alert {
   margin-top: 20px;
@@ -121,4 +134,10 @@ main section .modal--show {
   opacity: 1;
   pointer-events: unset;
   transition: opacity 0.6s;
+}
+main .negro {
+  background-color: #111111;
+}
+main .blanco {
+  background-color: #fff;
 }/*# sourceMappingURL=style.css.map */

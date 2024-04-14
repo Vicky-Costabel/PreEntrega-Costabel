@@ -66,8 +66,7 @@ header{
 
 main{
   section{
-    .modal-inicio{
-      
+    .modal-inicio{ 
       width: 100vw;
       height: 100vh;
       position: fixed;
@@ -75,7 +74,7 @@ main{
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #111111;
+      
       display: flex;
       opacity: 0;
       pointer-events: none;
@@ -100,31 +99,33 @@ main{
         height: 100vh;
         background-color: #ffffff;
         opacity: 0;
-        transition: opacity 4s ease;
+        transition: opacity 3s ease; 
+        position: absolute;
+        top: 0;
       }
       .barrera{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 100px;
-        
         #boton {
+          position: relative;
           padding: 10px 20px;
           font-size: 50px;
           color: #ffffff;
           cursor: pointer;
+          z-index: 1000;
         }
-        // .progress-bar {
-        //   width: 200px;
-        //   height: 20px;
-        //   margin-top: 20px;
-        //   .progress {
-        //     height: 100%;
-        //     background-image: #fff radial-gradient(#000 #fff);
-        //     background-color: #ffffff;
-            
-        //   }
-        // }
+      }
+      .inicio {
+        position: fixed;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        transition: opacity 0.5s ease; 
+        width: 80vw;
+        height: 200px;
+        text-align: center;
+        display: inline-flex;
       }
       .alert {
         margin-top: 20px;
@@ -136,19 +137,19 @@ main{
       .hidden {
         display: none;
       }
-      
-      
-      
-      
-      
-
     }
     .modal--show{
       opacity: 1;
       pointer-events: unset;
       transition: opacity .6s; 
     }
-  }   
+  } 
+  .negro{
+    background-color: #111111;
+  } 
+  .blanco{
+    background-color: #fff;
+  }
 }
 
 
