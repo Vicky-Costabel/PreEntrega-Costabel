@@ -18,49 +18,108 @@ body{
 //header
 header{
   margin: 5px;
-  display: flex;
-  justify-content: center;
+  display: flexbox;
   .pantalla-inicial{
-    display: inline-flex;
+    display: inline-block;
+    .corazon{
+      font-size: 50px;
+      left: 3%;
+      position: absolute;
+      color: #ffffff93;
+    }
     .finales{
-      margin: 10px;
-      width: 45vw;
+      margin: 10px 20px;
+      width: 100%;
       height: 90vh;
-      background-color: aqua;
+      position: fixed;
+      left: 0;
       .good{
-        display: flex;
-        color: blue;
-        justify-content: end;
-        .corazon-good{
-          font-size: 50px;
+        justify-content: center;
+        .final-b{
+          display: flex;
           position: absolute;
+          left: 600px;
+          width: 50vw;
+          height: 90vh;
+          align-content: center;
+          #good{
+            position: relative;
+            height: 95vh;
+            right: 500px;
+            object-fit: cover;
+            padding: 1%;
+          }
+          .bueno{
+            height: 90vh;
+            display: none;
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            flex-direction: row;
+            background-color: #1111118c;
+            border-radius: 30px;
+            padding: 3%;
+            .titulo-final{
+              font-size: 25px;
+              display: flex;
+              bottom: 0;
+              padding-top: 20px;
+            }
+          }
         }
-        img{
-          width: 100%;
-          background-color: cadetblue;
-        }
-
       }
+
       .bad{
-        display: flex;
-        justify-content: start;
-        color: bisque;
-        .corazon-bad{
-          font-size: 50px;
+        justify-content: center;
+        .final-m{
+          display: flex;
           position: absolute;
-        }
-        img{
-          width: 100%;
-          background-color: cadetblue;
+          left: 600px;
+          width: 50vw;
+          height: 90vh;
+          align-content: center;
+          #bad{
+            position: relative;
+            height: 95vh;
+            right: 500px;
+            object-fit: cover;
+            padding: 1%;
+          }
+          .malo{
+            height: 90vh;
+            display: none;
+            color: #fff;
+            position: absolute;
+            font-size: 18px;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            flex-direction: row;
+            background-color: #1111118c;
+            border-radius: 30px;
+            padding: 3%;
+            .titulo-final{
+              font-size: 25px;
+              display: flex;
+              bottom: 0;
+              padding-top: 20px;
+            }
+          }
         }
       }
     }
-  }
-  .inicio{
-    position: absolute;
-    bottom: 200px;
-    font-size: 80px;
-    color: brown; 
+    .inicio{
+      width: 300px;
+      position: absolute;
+      z-index: 0;
+      left: 47vw;
+      bottom: 200px;
+      font-size: 80px;
+      color: rgb(87, 87, 87); 
+    }
   }
 }
 
@@ -74,7 +133,6 @@ main{
       left: 0;
       right: 0;
       bottom: 0;
-      
       display: flex;
       opacity: 0;
       pointer-events: none;
@@ -127,13 +185,7 @@ main{
         text-align: center;
         display: inline-flex;
       }
-      .alert {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #4caf50;
-        color: #fff;
-        display: none;
-      }
+      
       .hidden {
         display: none;
       }
@@ -143,7 +195,100 @@ main{
       pointer-events: unset;
       transition: opacity .6s; 
     }
-  } 
+   
+  }
+  .novela{
+    width: 100vw;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    bottom: 1%;
+    .cuadro-player{
+      margin: 0 10%;
+      width: 1000px;
+      justify-content: center;
+      z-index: 0;
+      #nombre-player{
+        font-size: 30px;
+        display: flex;
+        width: max-content;
+        padding: 0 1%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border: 3px solid rgb(77, 77, 77);
+        border-bottom: 0;
+        position: relative;
+        background-color: #747474;
+        top: 3px;
+      }
+      .cuadro-opciones{
+        display: block;
+        width: 100%;
+        padding: 0 1%;
+        min-height: 20vh;
+        border-top-right-radius: 30px;
+        border: 3px solid rgb(77, 77, 77);
+        background-color: #c7c7c7;
+        .sec{
+          margin-bottom: 1%;
+          width: 100%;
+          height: 100%;
+          .opcion{
+            margin-top: 1%;        
+            font-size: 20px;
+            padding: 0 1%;
+            width: 100%;
+            &:hover{
+              background-color: rgb(151, 151, 151);
+              border-radius: 30px; 
+            }
+          }
+          #seccion4{
+            font-size: 20px;
+            font-weight: 100;
+          }
+          .siguiente{
+            
+            display: flex;
+            width: 100%;
+            justify-content: end;
+            flex-direction: row-reverse;
+          }
+        } 
+      }
+    }
+    .cuadro-muerte{
+      margin: 0 10%;
+      width: 300px;
+      
+      display: flexbox;
+      justify-content: center;
+      position: absolute;
+      bottom: 400px;
+      right: 700px;
+      .dialogo-muerte{
+        display: block;
+        padding: 3%;
+        min-height: 10vh;
+        border-radius: 30px;
+        border: 1px solid rgb(77, 77, 77);
+        background-color: #c7c7c792;
+        text-align: center;
+      }
+    }
+    .personajes{
+      position: absolute;
+      bottom: 0;
+      .doncella{
+        position: relative;
+        height: 80vh; 
+      }
+      .caballero-muerte{
+        position: relative;
+        height: 80vh;
+      }
+    }
+  }
   .negro{
     background-color: #111111;
   } 
@@ -151,5 +296,12 @@ main{
     background-color: #fff;
   }
 }
+
+.hidden {
+  display: none;
+}
+
+
+
 
 

@@ -14,49 +14,110 @@ body {
 
 header {
   margin: 5px;
-  display: flex;
-  justify-content: center;
+  display: flexbox;
 }
 header .pantalla-inicial {
-  display: inline-flex;
+  display: inline-block;
+}
+header .pantalla-inicial .corazon {
+  font-size: 50px;
+  left: 3%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5764705882);
 }
 header .pantalla-inicial .finales {
-  margin: 10px;
-  width: 45vw;
+  margin: 10px 20px;
+  width: 100%;
   height: 90vh;
-  background-color: aqua;
+  position: fixed;
+  left: 0;
 }
 header .pantalla-inicial .finales .good {
+  justify-content: center;
+}
+header .pantalla-inicial .finales .good .final-b {
   display: flex;
-  color: blue;
-  justify-content: end;
-}
-header .pantalla-inicial .finales .good .corazon-good {
-  font-size: 50px;
   position: absolute;
+  left: 600px;
+  width: 50vw;
+  height: 90vh;
+  align-content: center;
 }
-header .pantalla-inicial .finales .good img {
-  width: 100%;
-  background-color: cadetblue;
+header .pantalla-inicial .finales .good .final-b #good {
+  position: relative;
+  height: 95vh;
+  right: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1%;
+}
+header .pantalla-inicial .finales .good .final-b .bueno {
+  height: 90vh;
+  display: none;
+  color: #fff;
+  position: absolute;
+  font-size: 20px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgba(17, 17, 17, 0.5490196078);
+  border-radius: 30px;
+  padding: 3%;
+}
+header .pantalla-inicial .finales .good .final-b .bueno .titulo-final {
+  font-size: 25px;
+  display: flex;
+  bottom: 0;
+  padding-top: 20px;
 }
 header .pantalla-inicial .finales .bad {
+  justify-content: center;
+}
+header .pantalla-inicial .finales .bad .final-m {
   display: flex;
-  justify-content: start;
-  color: bisque;
-}
-header .pantalla-inicial .finales .bad .corazon-bad {
-  font-size: 50px;
   position: absolute;
+  left: 600px;
+  width: 50vw;
+  height: 90vh;
+  align-content: center;
 }
-header .pantalla-inicial .finales .bad img {
-  width: 100%;
-  background-color: cadetblue;
+header .pantalla-inicial .finales .bad .final-m #bad {
+  position: relative;
+  height: 95vh;
+  right: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1%;
 }
-header .inicio {
+header .pantalla-inicial .finales .bad .final-m .malo {
+  height: 90vh;
+  display: none;
+  color: #fff;
   position: absolute;
+  font-size: 18px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  flex-direction: row;
+  background-color: rgba(17, 17, 17, 0.5490196078);
+  border-radius: 30px;
+  padding: 3%;
+}
+header .pantalla-inicial .finales .bad .final-m .malo .titulo-final {
+  font-size: 25px;
+  display: flex;
+  bottom: 0;
+  padding-top: 20px;
+}
+header .pantalla-inicial .inicio {
+  width: 300px;
+  position: absolute;
+  z-index: 0;
+  left: 47vw;
   bottom: 200px;
   font-size: 80px;
-  color: brown;
+  color: rgb(87, 87, 87);
 }
 
 main section .modal-inicio {
@@ -120,13 +181,6 @@ main section .modal-inicio .inicio {
   text-align: center;
   display: inline-flex;
 }
-main section .modal-inicio .alert {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: #fff;
-  display: none;
-}
 main section .modal-inicio .hidden {
   display: none;
 }
@@ -135,9 +189,104 @@ main section .modal--show {
   pointer-events: unset;
   transition: opacity 0.6s;
 }
+main .novela {
+  width: 100vw;
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  bottom: 1%;
+}
+main .novela .cuadro-player {
+  margin: 0 10%;
+  width: 1000px;
+  justify-content: center;
+  z-index: 0;
+}
+main .novela .cuadro-player #nombre-player {
+  font-size: 30px;
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 1%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 3px solid rgb(77, 77, 77);
+  border-bottom: 0;
+  position: relative;
+  background-color: #747474;
+  top: 3px;
+}
+main .novela .cuadro-player .cuadro-opciones {
+  display: block;
+  width: 100%;
+  padding: 0 1%;
+  min-height: 20vh;
+  border-top-right-radius: 30px;
+  border: 3px solid rgb(77, 77, 77);
+  background-color: #c7c7c7;
+}
+main .novela .cuadro-player .cuadro-opciones .sec {
+  margin-bottom: 1%;
+  width: 100%;
+  height: 100%;
+}
+main .novela .cuadro-player .cuadro-opciones .sec .opcion {
+  margin-top: 1%;
+  font-size: 20px;
+  padding: 0 1%;
+  width: 100%;
+}
+main .novela .cuadro-player .cuadro-opciones .sec .opcion:hover {
+  background-color: rgb(151, 151, 151);
+  border-radius: 30px;
+}
+main .novela .cuadro-player .cuadro-opciones .sec #seccion4 {
+  font-size: 20px;
+  font-weight: 100;
+}
+main .novela .cuadro-player .cuadro-opciones .sec .siguiente {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+main .novela .cuadro-muerte {
+  margin: 0 10%;
+  width: 300px;
+  display: flexbox;
+  justify-content: center;
+  position: absolute;
+  bottom: 400px;
+  right: 700px;
+}
+main .novela .cuadro-muerte .dialogo-muerte {
+  display: block;
+  padding: 3%;
+  min-height: 10vh;
+  border-radius: 30px;
+  border: 1px solid rgb(77, 77, 77);
+  background-color: rgba(199, 199, 199, 0.5725490196);
+  text-align: center;
+}
+main .novela .personajes {
+  position: absolute;
+  bottom: 0;
+}
+main .novela .personajes .doncella {
+  position: relative;
+  height: 80vh;
+}
+main .novela .personajes .caballero-muerte {
+  position: relative;
+  height: 80vh;
+}
 main .negro {
   background-color: #111111;
 }
 main .blanco {
   background-color: #fff;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

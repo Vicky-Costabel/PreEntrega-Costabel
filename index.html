@@ -9,29 +9,61 @@
         <script src="https://kit.fontawesome.com/f56ab98fac.js" crossorigin="anonymous"></script>
     <!-- mi estilo -->
         <link rel="stylesheet" href="/css/style.css">
-
+    <!-- Sweetalert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <!-- Mi main -->
-    <script src="/js/borrador.js" defer></script>
+    
     <script src="/js/main.js" defer></script>
     <title>Proyecto</title>
 </head>
 <body class="animate__animated animate__fadeIn">
     <header>
         <section class="pantalla-inicial">
+            <i class="fa-regular fa-heart corazon"> </i>
             <div class="finales">
-                <div class="good">
-                    <i class="fa-regular fa-heart corazon-good"></i>
-                    <img src="img/img-prueba.png" class="good-ending" alt=" final bueno">
+                <div class="good hidden">
+                    <div class="final-b ">
+                        <img src="img/good-ending.png" id="good" class="good-ending " alt=" final bueno">
+                        <div class="bueno" >
+                            <p>
+                                Sentiste cómo las frías yemas de sus dedos rozaban tu piel, mientras tu propio calor parecía disipar lentamente la sensación de frío que te envolvía. Finalmente, sus hermosos ojos se alzaron para encontrarse con los tuyos, reconociéndote en la penumbra que los rodeaba.
+                            </p>
+                            <p>
+                                "Viniste en busca de mí", susurró con asombro, como si las palabras fueran un eco de su propia incredulidad. La figura oscura, vencida, aceptó su derrota, aunque en sus facciones se dibujaba la sombra de la decepción. Con gesto resignado, se alzó, consciente de que por el momento no había más por hacer.
+                            </p>
+                            <p>
+                                "En algún momento, volverás a mí... Ahora, el destino está en tus manos; depende de ti si será tarde o temprano", pronunció con solemnidad, sus palabras resonando en el silencio como un eco del futuro incierto que aguardaba.
+                            </p>
+                            <p class="titulo-final">
+                                sin mas volviste tus pasos a traves de la fria ocuridad, Adentrandote en la oscuridad pero con la calidez de tu amada ilumiando el camamino
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bad hidden">
+                    <div class="final-m ">
+                    <img src="img/Bad-ending.png" id="bad" class="bad-ending " alt="final malo">
+                    <div class="malo"> 
+                        <p>
+                            Con impotencia, presenciaste cómo las manos del ser oscuro se entrelazaban con las de ella, en un gesto que resonaba con la solemnidad de una antigua tragedia. El frío de la derrota se filtró en tu corazón, congelando cada latido, mientras observabas cómo el calor de la victoria resplandecía en los ojos de ese ser, vislumbraste la soberbia de quien sabe que siempre triunfa y triunfará, una certeza que se deslizaba como una sombra eterna.
+                        </p>
+                        <p>
+                            "¿Lista para retornar al hogar, mi amor?" pronunció el oscuro ser con una voz suave, que parecía teñida de misterio y promesas ocultas, mientras acariciaba la mano de ella con una delicadeza que contrastaba con su naturaleza oscura. Con gentileza, la ayudó a incorporarse, como si el acto mismo de alzarse fuera un ritual ancestral.
+                        </p>
+                        <p>
+                            "Pareces fatigada de la espera... Ven conmigo", continuó el ser oscuro, su voz resonando con una seguridad que solo aquellos destinados a la oscuridad pueden poseer, "y te prometo acompañarte mientras reposas. En mis brazos encontrarás el consuelo que tanto anhelas, y juntos enfrentaremos los desafíos que el destino nos depare".
+                        </p>
+                        <p class="titulo-final">
+                            Así, entre las sombras del pasado y los destellos del futuro incierto, se forjó un pacto silencioso, un vínculo que desafiaba que jamas podra quebrarse y que marca el inicio de tu desesperacion.
+                        </p>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="finales">
-                <div class="bad">
-                    <i class="fa-regular fa-heart corazon-bad "></i>
-                    <img src="img/img-prueba.png" class="bad-ending" alt="final malo">
-                </div>
-            </div>
+           
+            <i class="fa-solid fa-dungeon inicio" id="puerta" onclick="iniciarHistoria()"></i>
+            
         </section>
-        <i class="fa-solid fa-dungeon inicio" onclick="iniciarHistoria()"></i>
     </header>
     <main>
         <section>
@@ -43,14 +75,43 @@
                     </div>
                     <div class="velo"></div>
                 </div>
-                <div id="inicio" class="inicio"></div>
+                <div id="inicio" class="inicio"></div>   
+            </div>      
+        </section>
+        <section class="novela">
+            <div class="personajes hidden">
+                <img src="img/doncella.png" class="doncella" alt="Doncella amada">
+                <img src="img/muerte.png" class="caballero-muerte" alt="Caballero de la muerte">
+            </div>
+            <div class="cuadro-player hidden">
+                <h1 id="nombre-player">Caballero</h1>
+                <div class="cuadro-opciones hidden" onclick="siguiente()">
+                    <div class="sec " id="seccion1">
+                        <div class="opcion" onclick="obtenerSeleccion('seccion1', 'A'), siguienteRonda(1)">Amor, ¿me recuerdas? Soy yo. Por favor, dime que aún guardas en tu corazón los momentos que compartimos juntos. Recuerdo cómo nuestras risas se mezclaban con el cálido abrazo del sol, y cómo cada mirada entre nosotros era un universo de complicidad y amor. por favor recuerdame...</div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion1', 'B'), siguienteRonda(2)">Amor, ¿me recuerdas? Toma mi mano. ¿Por qué lo hiciste? ¿Por qué? Toma mi mano y te sacaré de aquí. </div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion1', 'C'), siguienteRonda(3)">Amor, soy yo, toma mi mano. No hay tiempo solo hazlo...</div>
+                    </div>
+                    <div class="sec hidden" id="seccion2">
+                        <div class="opcion" onclick="obtenerSeleccion('seccion2', 'A'), siguienteRonda(4)">Por favor, perdóname por estar ciego, por no ser capaz de ver tu tristeza detrás de esa falsa sonrisa. Permíteme compensarlo. Prometo abrir los ojos y ver más allá de las apariencias, para reconocer tus verdaderos sentimientos </div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion2', 'B'), siguienteRonda(5)">¿Qué esperas? Toma mi mano. ¿No ves que lo que te dice son mentiras? ¿No ves cómo trata de engañarte con sus palabras vacías? </div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion2', 'C'), siguienteRonda(6)">No lo escuches, cariño, solo escúchame a mí. Él intentará engañarte con sus palabras, pero yo te hablo desde el corazón, con la verdad desnuda en cada palabra.</div>
+                    </div>
+                    <div class="sec hidden" id="seccion3">
+                        <div class="opcion" onclick="obtenerSeleccion('seccion3', 'A'), siguienteRonda(7)">Perdón por fallarte y perdón por haberte hecho llegar hasta aquí. Si tomas mi mano, prometo cambiar y amarte incondicionalmente. Pero si decides no hacerlo, por favor, prométeme que vayas a donde vayas, cuidarás de ti misma, ¿sí?</div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion3', 'B'), siguienteRonda(8)">Mirame, mira mi rostro, te amo por favor no me dejes...</div>
+                        <div class="opcion" onclick="obtenerSeleccion('seccion3', 'C'), siguienteRonda(9)">Prometo cambiar, juro no fallarte otra vez</div>
+                    </div>
+                    
+                    <div class="sec hidden" id="seccion4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam repudiandae in quis nostrum? Possimus nulla voluptatibus minima id ipsam voluptate accusamus, eligendi accusantium, provident eos nisi, sit dolore iure.</div>
+                    <i class="fa-solid fa-forward-step fa-beat sigiente hidden" id="siguiente"></i>
+                    <i class="fa-solid fa-forward-step fa-beat sigiente hidden" id="respuesta" onclick="obtenerRespuestas(), finalizarNovela()"></i>
+                </div>
+            </div>
+            <div class="cuadro-muerte hidden">
+                <div class="dialogo-muerte">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est laboriosam velit, tenetur beatae minus at voluptatem voluptatum non? Iusto atque magni unde quasi ut facilis ea nam quo esse ipsa.</div>
             </div>
         </section>
-        
     </main>
-    
-
-     
 </body>
     
 </html>
